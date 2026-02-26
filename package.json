@@ -11,5 +11,6 @@
     "consensus-guard-core": "file:../consensus-guard-core",
     "@consensus-tools/consensus-tools": "file:../consensus-tools",
     "tsx": "^4.20.3"
-  }
+  },
+  "license": "MIT"
 }
