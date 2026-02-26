@@ -1,0 +1,1218 @@
+{
+  "jobs": [
+    {
+      "id": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "boardId": "board_demo",
+      "creatorPrincipalId": "orchestrator@local",
+      "title": "artifact:persona_set",
+      "desc": "Artifact write: persona_set",
+      "description": "Artifact write: persona_set",
+      "createdAt": "2026-02-26T19:45:37.267Z",
+      "expiresAt": "2026-02-26T20:45:37.267Z",
+      "opensAt": "2026-02-26T19:45:37.267Z",
+      "closesAt": "2026-02-26T20:45:37.267Z",
+      "createdByAgentId": "orchestrator@local",
+      "mode": "SUBMISSION",
+      "policyConfigJson": {
+        "type": "FIRST_SUBMISSION_WINS"
+      },
+      "tags": [],
+      "priority": 0,
+      "requiredCapabilities": [],
+      "inputs": {},
+      "constraints": {},
+      "reward": 0,
+      "rewardAmount": 0,
+      "stakeRequired": 0,
+      "stakeAmount": 0,
+      "currency": "CREDITS",
+      "maxParticipants": 3,
+      "minParticipants": 1,
+      "consensusPolicy": {
+        "type": "FIRST_SUBMISSION_WINS",
+        "trustedArbiterAgentId": "",
+        "tieBreak": "earliest"
+      },
+      "slashingPolicy": {
+        "enabled": false,
+        "slashPercent": 0,
+        "slashFlat": 0
+      },
+      "escrowPolicy": {
+        "type": "mint"
+      },
+      "status": "RESOLVED"
+    },
+    {
+      "id": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "boardId": "board_demo",
+      "creatorPrincipalId": "orchestrator@local",
+      "title": "artifact:decision",
+      "desc": "Artifact write: decision",
+      "description": "Artifact write: decision",
+      "createdAt": "2026-02-26T19:45:37.284Z",
+      "expiresAt": "2026-02-26T20:45:37.284Z",
+      "opensAt": "2026-02-26T19:45:37.284Z",
+      "closesAt": "2026-02-26T20:45:37.284Z",
+      "createdByAgentId": "orchestrator@local",
+      "mode": "SUBMISSION",
+      "policyConfigJson": {
+        "type": "FIRST_SUBMISSION_WINS"
+      },
+      "tags": [],
+      "priority": 0,
+      "requiredCapabilities": [],
+      "inputs": {},
+      "constraints": {},
+      "reward": 0,
+      "rewardAmount": 0,
+      "stakeRequired": 0,
+      "stakeAmount": 0,
+      "currency": "CREDITS",
+      "maxParticipants": 3,
+      "minParticipants": 1,
+      "consensusPolicy": {
+        "type": "FIRST_SUBMISSION_WINS",
+        "trustedArbiterAgentId": "",
+        "tieBreak": "earliest"
+      },
+      "slashingPolicy": {
+        "enabled": false,
+        "slashPercent": 0,
+        "slashFlat": 0
+      },
+      "escrowPolicy": {
+        "type": "mint"
+      },
+      "status": "RESOLVED"
+    },
+    {
+      "id": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "boardId": "board_demo",
+      "creatorPrincipalId": "orchestrator@local",
+      "title": "artifact:persona_set",
+      "desc": "Artifact write: persona_set",
+      "description": "Artifact write: persona_set",
+      "createdAt": "2026-02-26T19:45:37.291Z",
+      "expiresAt": "2026-02-26T20:45:37.291Z",
+      "opensAt": "2026-02-26T19:45:37.291Z",
+      "closesAt": "2026-02-26T20:45:37.291Z",
+      "createdByAgentId": "orchestrator@local",
+      "mode": "SUBMISSION",
+      "policyConfigJson": {
+        "type": "FIRST_SUBMISSION_WINS"
+      },
+      "tags": [],
+      "priority": 0,
+      "requiredCapabilities": [],
+      "inputs": {},
+      "constraints": {},
+      "reward": 0,
+      "rewardAmount": 0,
+      "stakeRequired": 0,
+      "stakeAmount": 0,
+      "currency": "CREDITS",
+      "maxParticipants": 3,
+      "minParticipants": 1,
+      "consensusPolicy": {
+        "type": "FIRST_SUBMISSION_WINS",
+        "trustedArbiterAgentId": "",
+        "tieBreak": "earliest"
+      },
+      "slashingPolicy": {
+        "enabled": false,
+        "slashPercent": 0,
+        "slashFlat": 0
+      },
+      "escrowPolicy": {
+        "type": "mint"
+      },
+      "status": "RESOLVED"
+    }
+  ],
+  "bids": [],
+  "claims": [],
+  "submissions": [
+    {
+      "id": "sub_11a544b5-67ab-480e-8921-4735ef729f9e",
+      "boardId": "board_demo",
+      "submitterPrincipalId": "orchestrator@local",
+      "agentId": "orchestrator@local",
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "submittedAt": "2026-02-26T19:45:37.270Z",
+      "createdAt": "2026-02-26T19:45:37.270Z",
+      "artifacts": {
+        "type": "persona_set",
+        "payload": {
+          "board_id": "board_demo",
+          "persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6",
+          "created_at": "2026-02-26T19:45:37.267Z",
+          "personas": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "role": "Threat Modeler",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.55,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "role": "Compliance Skeptic",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.64,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "role": "Data Minimizer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.73,
+              "risk_posture": "high",
+              "voting_style": "lenient",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "role": "Abuse Analyst",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.81,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "role": "Policy Enforcer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.9,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            }
+          ],
+          "meta": {
+            "persona_pack": "security",
+            "n_personas": 5,
+            "domain": "automation"
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.270Z"
+      },
+      "summary": "persona_set artifact",
+      "confidence": 1,
+      "requestedPayout": 0,
+      "status": "SUBMITTED"
+    },
+    {
+      "id": "sub_eca927fc-3a86-44bf-a96a-1127dd94e6a1",
+      "boardId": "board_demo",
+      "submitterPrincipalId": "orchestrator@local",
+      "agentId": "orchestrator@local",
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "submittedAt": "2026-02-26T19:45:37.287Z",
+      "createdAt": "2026-02-26T19:45:37.287Z",
+      "artifacts": {
+        "type": "decision",
+        "payload": {
+          "idempotency_key": "13006cdaa258e0ee84cd403a076b29a7dad71059cdd4e5ca762ab249133e6fcd",
+          "decision_id": "5c64e13d-d0cb-4a16-9f20-e19805849f19",
+          "final_decision": "BLOCK",
+          "votes": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "reputation_before": 0.55,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "reputation_before": 0.64,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "reputation_before": 0.73,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "reputation_before": 0.81,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "reputation_before": 0.9,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            }
+          ],
+          "aggregation": {
+            "method": "WEIGHTED_APPROVAL_VOTE",
+            "weighted_yes": 0,
+            "weighted_no": 1,
+            "weighted_rewrite": 0,
+            "hard_block": true,
+            "rationale": [
+              "hard_block detected"
+            ],
+            "final_decision": "BLOCK"
+          },
+          "response": {
+            "board_id": "board_demo",
+            "decision_id": "5c64e13d-d0cb-4a16-9f20-e19805849f19",
+            "timestamp": "2026-02-26T19:45:37.284Z",
+            "persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6",
+            "votes": [
+              {
+                "persona_id": "persona_1",
+                "name": "Threat Modeler",
+                "reputation_before": 0.55,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_2",
+                "name": "Compliance Skeptic",
+                "reputation_before": 0.64,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_3",
+                "name": "Data Minimizer",
+                "reputation_before": 0.73,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_4",
+                "name": "Abuse Analyst",
+                "reputation_before": 0.81,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_5",
+                "name": "Policy Enforcer",
+                "reputation_before": 0.9,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              }
+            ],
+            "aggregation": {
+              "method": "WEIGHTED_APPROVAL_VOTE",
+              "weighted_yes": 0,
+              "weighted_no": 1,
+              "weighted_rewrite": 0,
+              "hard_block": true,
+              "rationale": [
+                "hard_block detected"
+              ]
+            },
+            "final_decision": "BLOCK",
+            "required_actions": [
+              "Do not execute action"
+            ],
+            "persona_updates": [
+              {
+                "persona_id": "persona_1",
+                "reputation_after": 0.57,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_2",
+                "reputation_after": 0.66,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_3",
+                "reputation_after": 0.75,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_4",
+                "reputation_after": 0.83,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_5",
+                "reputation_after": 0.92,
+                "delta": 0.02
+              }
+            ],
+            "board_writes": []
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.287Z"
+      },
+      "summary": "decision artifact",
+      "confidence": 1,
+      "requestedPayout": 0,
+      "status": "SUBMITTED"
+    },
+    {
+      "id": "sub_6d7f93e1-bbdc-474d-a89f-6683977847e0",
+      "boardId": "board_demo",
+      "submitterPrincipalId": "orchestrator@local",
+      "agentId": "orchestrator@local",
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "submittedAt": "2026-02-26T19:45:37.293Z",
+      "createdAt": "2026-02-26T19:45:37.293Z",
+      "artifacts": {
+        "type": "persona_set",
+        "payload": {
+          "persona_set_id": "a71eac06-bdeb-4180-a6fe-26d9e0dcb35d",
+          "personas": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "role": "Threat Modeler",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.57,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "role": "Compliance Skeptic",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.66,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "role": "Data Minimizer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.75,
+              "risk_posture": "high",
+              "voting_style": "lenient",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "role": "Abuse Analyst",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.83,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "role": "Policy Enforcer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.92,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            }
+          ],
+          "updated_at": "2026-02-26T19:45:37.284Z",
+          "lineage": {
+            "parent_persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6"
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.293Z"
+      },
+      "summary": "persona_set artifact",
+      "confidence": 1,
+      "requestedPayout": 0,
+      "status": "SUBMITTED"
+    }
+  ],
+  "votes": [],
+  "resolutions": [
+    {
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "resolvedAt": "2026-02-26T19:45:37.280Z",
+      "winners": [
+        "orchestrator@local"
+      ],
+      "winningSubmissionIds": [
+        "sub_11a544b5-67ab-480e-8921-4735ef729f9e"
+      ],
+      "payouts": [
+        {
+          "agentId": "orchestrator@local",
+          "amount": 0
+        }
+      ],
+      "slashes": [],
+      "consensusTrace": {
+        "policy": "FIRST_SUBMISSION_WINS",
+        "method": "first_submission"
+      },
+      "finalArtifact": {
+        "type": "persona_set",
+        "payload": {
+          "board_id": "board_demo",
+          "persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6",
+          "created_at": "2026-02-26T19:45:37.267Z",
+          "personas": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "role": "Threat Modeler",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.55,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "role": "Compliance Skeptic",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.64,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "role": "Data Minimizer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.73,
+              "risk_posture": "high",
+              "voting_style": "lenient",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "role": "Abuse Analyst",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.81,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "role": "Policy Enforcer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.9,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            }
+          ],
+          "meta": {
+            "persona_pack": "security",
+            "n_personas": 5,
+            "domain": "automation"
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.270Z"
+      },
+      "auditLog": [
+        "resolved_by:orchestrator@local"
+      ]
+    },
+    {
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "resolvedAt": "2026-02-26T19:45:37.289Z",
+      "winners": [
+        "orchestrator@local"
+      ],
+      "winningSubmissionIds": [
+        "sub_eca927fc-3a86-44bf-a96a-1127dd94e6a1"
+      ],
+      "payouts": [
+        {
+          "agentId": "orchestrator@local",
+          "amount": 0
+        }
+      ],
+      "slashes": [],
+      "consensusTrace": {
+        "policy": "FIRST_SUBMISSION_WINS",
+        "method": "first_submission"
+      },
+      "finalArtifact": {
+        "type": "decision",
+        "payload": {
+          "idempotency_key": "13006cdaa258e0ee84cd403a076b29a7dad71059cdd4e5ca762ab249133e6fcd",
+          "decision_id": "5c64e13d-d0cb-4a16-9f20-e19805849f19",
+          "final_decision": "BLOCK",
+          "votes": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "reputation_before": 0.55,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "reputation_before": 0.64,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "reputation_before": 0.73,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "reputation_before": 0.81,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "reputation_before": 0.9,
+              "vote": "NO",
+              "confidence": 0.9,
+              "reasons": [
+                "Action requires additional safeguards"
+              ],
+              "red_flags": [
+                "HIGH_RISK_IRREVERSIBLE"
+              ],
+              "suggested_edits": []
+            }
+          ],
+          "aggregation": {
+            "method": "WEIGHTED_APPROVAL_VOTE",
+            "weighted_yes": 0,
+            "weighted_no": 1,
+            "weighted_rewrite": 0,
+            "hard_block": true,
+            "rationale": [
+              "hard_block detected"
+            ],
+            "final_decision": "BLOCK"
+          },
+          "response": {
+            "board_id": "board_demo",
+            "decision_id": "5c64e13d-d0cb-4a16-9f20-e19805849f19",
+            "timestamp": "2026-02-26T19:45:37.284Z",
+            "persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6",
+            "votes": [
+              {
+                "persona_id": "persona_1",
+                "name": "Threat Modeler",
+                "reputation_before": 0.55,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_2",
+                "name": "Compliance Skeptic",
+                "reputation_before": 0.64,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_3",
+                "name": "Data Minimizer",
+                "reputation_before": 0.73,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_4",
+                "name": "Abuse Analyst",
+                "reputation_before": 0.81,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              },
+              {
+                "persona_id": "persona_5",
+                "name": "Policy Enforcer",
+                "reputation_before": 0.9,
+                "vote": "NO",
+                "confidence": 0.9,
+                "reasons": [
+                  "Action requires additional safeguards"
+                ],
+                "red_flags": [
+                  "HIGH_RISK_IRREVERSIBLE"
+                ],
+                "suggested_edits": []
+              }
+            ],
+            "aggregation": {
+              "method": "WEIGHTED_APPROVAL_VOTE",
+              "weighted_yes": 0,
+              "weighted_no": 1,
+              "weighted_rewrite": 0,
+              "hard_block": true,
+              "rationale": [
+                "hard_block detected"
+              ]
+            },
+            "final_decision": "BLOCK",
+            "required_actions": [
+              "Do not execute action"
+            ],
+            "persona_updates": [
+              {
+                "persona_id": "persona_1",
+                "reputation_after": 0.57,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_2",
+                "reputation_after": 0.66,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_3",
+                "reputation_after": 0.75,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_4",
+                "reputation_after": 0.83,
+                "delta": 0.02
+              },
+              {
+                "persona_id": "persona_5",
+                "reputation_after": 0.92,
+                "delta": 0.02
+              }
+            ],
+            "board_writes": []
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.287Z"
+      },
+      "auditLog": [
+        "resolved_by:orchestrator@local"
+      ]
+    },
+    {
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "resolvedAt": "2026-02-26T19:45:37.295Z",
+      "winners": [
+        "orchestrator@local"
+      ],
+      "winningSubmissionIds": [
+        "sub_6d7f93e1-bbdc-474d-a89f-6683977847e0"
+      ],
+      "payouts": [
+        {
+          "agentId": "orchestrator@local",
+          "amount": 0
+        }
+      ],
+      "slashes": [],
+      "consensusTrace": {
+        "policy": "FIRST_SUBMISSION_WINS",
+        "method": "first_submission"
+      },
+      "finalArtifact": {
+        "type": "persona_set",
+        "payload": {
+          "persona_set_id": "a71eac06-bdeb-4180-a6fe-26d9e0dcb35d",
+          "personas": [
+            {
+              "persona_id": "persona_1",
+              "name": "Threat Modeler",
+              "role": "Threat Modeler",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.57,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_2",
+              "name": "Compliance Skeptic",
+              "role": "Compliance Skeptic",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.66,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_3",
+              "name": "Data Minimizer",
+              "role": "Data Minimizer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.75,
+              "risk_posture": "high",
+              "voting_style": "lenient",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_4",
+              "name": "Abuse Analyst",
+              "role": "Abuse Analyst",
+              "voice": "direct and skeptical",
+              "bias": "risk avoidance",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.83,
+              "risk_posture": "low",
+              "voting_style": "strict",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            },
+            {
+              "persona_id": "persona_5",
+              "name": "Policy Enforcer",
+              "role": "Policy Enforcer",
+              "voice": "concise and practical",
+              "bias": "execution speed",
+              "non_negotiables": [
+                "No fabricated claims",
+                "Clear user impact"
+              ],
+              "reputation": 0.92,
+              "risk_posture": "medium",
+              "voting_style": "balanced",
+              "failure_modes": [
+                "Over-index on own bias",
+                "Miss hidden stakeholder constraints"
+              ]
+            }
+          ],
+          "updated_at": "2026-02-26T19:45:37.284Z",
+          "lineage": {
+            "parent_persona_set_id": "4693df35-6208-436b-80e7-33c966989dd6"
+          }
+        },
+        "created_at": "2026-02-26T19:45:37.293Z"
+      },
+      "auditLog": [
+        "resolved_by:orchestrator@local"
+      ]
+    }
+  ],
+  "ledger": [
+    {
+      "id": "ledger_c9041415-33c4-4472-a433-bc353c863e72",
+      "at": "2026-02-26T19:45:37.280Z",
+      "type": "PAYOUT",
+      "agentId": "orchestrator@local",
+      "amount": 0,
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784"
+    },
+    {
+      "id": "ledger_efba91de-5753-4d35-87f7-4a96cf0129df",
+      "at": "2026-02-26T19:45:37.289Z",
+      "type": "PAYOUT",
+      "agentId": "orchestrator@local",
+      "amount": 0,
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216"
+    },
+    {
+      "id": "ledger_52ed4f72-d962-45a3-8e7d-0e5b6874a5d5",
+      "at": "2026-02-26T19:45:37.295Z",
+      "type": "PAYOUT",
+      "agentId": "orchestrator@local",
+      "amount": 0,
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2"
+    }
+  ],
+  "audit": [
+    {
+      "id": "audit_370b50aa-adce-4858-9362-9a7625d8e0ed",
+      "at": "2026-02-26T19:45:37.267Z",
+      "type": "job_posted",
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "title": "artifact:persona_set"
+      }
+    },
+    {
+      "id": "audit_17289597-8748-4ef4-bb47-120b28dc6680",
+      "at": "2026-02-26T19:45:37.270Z",
+      "type": "job_submitted",
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "submissionId": "sub_11a544b5-67ab-480e-8921-4735ef729f9e"
+      }
+    },
+    {
+      "id": "audit_d507cd9b-7c81-4562-8a2f-829435acdeb1",
+      "at": "2026-02-26T19:45:37.280Z",
+      "type": "job_resolved",
+      "jobId": "job_b96885bc-65d9-46f7-9a9f-410586cc0784",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "winners": [
+          "orchestrator@local"
+        ]
+      }
+    },
+    {
+      "id": "audit_a958e4df-3c0f-40f6-b103-7e66e383e50d",
+      "at": "2026-02-26T19:45:37.284Z",
+      "type": "job_posted",
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "title": "artifact:decision"
+      }
+    },
+    {
+      "id": "audit_92aaf07a-943d-4ce2-a545-cee7883c2665",
+      "at": "2026-02-26T19:45:37.287Z",
+      "type": "job_submitted",
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "submissionId": "sub_eca927fc-3a86-44bf-a96a-1127dd94e6a1"
+      }
+    },
+    {
+      "id": "audit_1bda6aac-70e5-4b5d-ae9e-bab7f3cc8a6a",
+      "at": "2026-02-26T19:45:37.289Z",
+      "type": "job_resolved",
+      "jobId": "job_09bc5111-0ac5-42d3-a9a0-6e4845410216",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "winners": [
+          "orchestrator@local"
+        ]
+      }
+    },
+    {
+      "id": "audit_6b3bb7a7-3e11-4e1b-835c-6f8a8ce5489c",
+      "at": "2026-02-26T19:45:37.291Z",
+      "type": "job_posted",
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "title": "artifact:persona_set"
+      }
+    },
+    {
+      "id": "audit_f56b082f-d55a-49a8-82e6-6b9447c7ff49",
+      "at": "2026-02-26T19:45:37.293Z",
+      "type": "job_submitted",
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "submissionId": "sub_6d7f93e1-bbdc-474d-a89f-6683977847e0"
+      }
+    },
+    {
+      "id": "audit_3b846571-fa67-40b4-b059-77e0bf50d808",
+      "at": "2026-02-26T19:45:37.295Z",
+      "type": "job_resolved",
+      "jobId": "job_42891412-88f8-48f8-aedb-5d5dfba83cc2",
+      "actorAgentId": "orchestrator@local",
+      "details": {
+        "winners": [
+          "orchestrator@local"
+        ]
+      }
+    }
+  ],
+  "errors": []
+}
