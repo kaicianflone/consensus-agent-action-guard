@@ -121,3 +121,7 @@ export async function handler(input, opts={}){
     return err(board_id||'', 'AGENT_ACTION_GUARD_FAILED', e.message||'unknown');
   }
 }
+
+export async function invoke(input, opts = {}) {
+  return handler(input, opts);
+}
