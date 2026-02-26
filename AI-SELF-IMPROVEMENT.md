@@ -39,3 +39,7 @@ Autonomous systems improve when action quality is constrained by explicit policy
 - **State substrate**: consensus-tools decision/persona artifacts
 - **Primary output**: action decision artifact + updated persona set
 - **Primary benefit**: safer autonomous execution under clear governance
+
+## Tool-call boundary
+
+To avoid orchestration drift, this skill routes board operations through the consensus-interact contract surface (directly or via guard-core wrappers). This preserves a single governance interaction model while allowing domain-specific decision logic.
