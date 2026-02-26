@@ -1,42 +1,38 @@
 ---
 name: consensus-agent-action-guard
-description: Open-source Consensus.Tools skill for governed AI decisions with board-native artifacts, strict JSON contracts, and deterministic policy behavior.
+description: Pre-execution governance for high-risk agent actions. Uses persona-weighted consensus to decide ALLOW/BLOCK/REQUIRE_REWRITE before external or irreversible side effects occur, with board-native audit artifacts.
 homepage: https://github.com/kaicianflone/consensus-agent-action-guard
 source: https://github.com/kaicianflone/consensus-agent-action-guard
 ---
 
 # consensus-agent-action-guard
 
-This skill is part of the Consensus.Tools ecosystem and is designed for production-grade agent governance.
+`consensus-agent-action-guard` is the final safety gate before autonomous action execution.
 
-## Why this skill exists
+## What this skill does
 
-Most agent systems fail because a single model decides and executes without explicit arbitration. This skill addresses that by applying consensus-style controls:
+- evaluates proposed agent actions (risk, irreversibility, side effects)
+- applies hard-block and weighted consensus logic
+- returns one of: `ALLOW | BLOCK | REQUIRE_REWRITE`
+- emits required follow-up actions (e.g., human confirmation)
+- writes decision and persona updates to board artifacts
 
-- structured multi-perspective evaluation
-- hard-block safety checks
-- deterministic aggregation and replayable outputs
-- board-native artifact persistence for auditing
+## Why this matters
 
-## Core capabilities
+Most catastrophic automation failures happen at execution time. This skill inserts explicit governance before side effects.
 
-- strict input/output JSON contracts for pipeline integration
-- deterministic policy evaluation where possible
-- idempotent retry behavior to avoid duplicate side effects
-- versioned artifacts written to board ledger history
+## Ecosystem role
 
-## Stack assumptions
+Built on the same consensus stack as communication and merge guards, giving one policy language across agent operations.
 
-- built to compose with consensus-interact workflows
-- uses consensus-tools board/job/submission primitives
-- designed to integrate with persona-generator persona_set artifacts
+## Typical usage
+
+- gating destructive operations
+- controlling external messaging/posting actions
+- requiring human confirmation for irreversible high-risk tasks
 
 ## Quick start
 
-Use the repo examples and run script to execute locally.
-
-## Expected outcomes
-
-- a decision/result artifact persisted to board state
-- optional updated persona_set artifact for adaptive governance
-- machine-parseable output suitable for automation systems
+```bash
+node --import tsx run.js --input ./examples/input.json
+```
