@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import { handler as personaGen } from '../../consensus-persona-generator/src/index.mjs';
 import { rejectUnknown, getLatest, getPersonaSet, getDecisionByKey, writeArtifact, aggregateVotes, updateReputations, makeIdempotencyKey, detectHardBlockFlags } from 'consensus-guard-core/src/index.mjs';
 
-const TOP = new Set(['board_id','proposed_action','constraints','persona_set_id']);
+const TOP = new Set(['board_id','proposed_action','constraints','persona_set_id','mode','external_votes']);
 const ACTION = new Set(['action_type','target','summary','irreversible','external_side_effect','risk_level']);
 const CONSTRAINTS = new Set(['require_human_confirm_for_irreversible','block_sensitive_exfiltration']);
 const err=(b,c,m,d={})=>({board_id:b,error:{code:c,message:m,details:d}});
@@ -17,6 +17,8 @@ function validate(input){
     if(typeof input.constraints!=='object'||Array.isArray(input.constraints)) return 'constraints must be object';
     e=rejectUnknown(input.constraints,CONSTRAINTS,'constraints'); if(e) return e;
   }
+  if(input.mode!==undefined && !['persona','external_agent'].includes(input.mode)) return 'mode must be persona|external_agent';
+  if(input.external_votes!==undefined && !Array.isArray(input.external_votes)) return 'external_votes must be array';
   return null;
 }
 
@@ -55,18 +57,19 @@ export async function handler(input, opts={}){
   try {
     const ve = validate(input); if (ve) return err(board_id||'', 'INVALID_INPUT', ve);
 
+    const externalMode = input.mode === 'external_agent';
     const idem = makeIdempotencyKey({ board_id, proposed_action: input.proposed_action, constraints: input.constraints||{}, persona_set_id: input.persona_set_id||null });
     const prior = await getDecisionByKey(board_id, idem, statePath);
     if (prior?.response) return prior.response;
 
-    let personaSet = input.persona_set_id ? await getPersonaSet(board_id, input.persona_set_id, statePath) : await getLatest(board_id, 'persona_set', statePath);
-    if (!personaSet) {
+    let personaSet = externalMode ? null : (input.persona_set_id ? await getPersonaSet(board_id, input.persona_set_id, statePath) : await getLatest(board_id, 'persona_set', statePath));
+    if (!personaSet && !externalMode) {
       const g = await personaGen({ board_id, task_context:{ goal:'agent action guard', audience:'internal ops', risk_tolerance:'medium', constraints:[], domain:'automation' }, n_personas:5, persona_pack:'security' }, { statePath });
       if (g.error) return err(board_id, 'PERSONA_GENERATION_FAILED', g.error.message);
       personaSet = { persona_set_id: g.persona_set_id, personas: g.personas };
     }
 
-    const votes = makeVotes(personaSet, input.proposed_action, input.constraints || {});
+    const votes = externalMode ? input.external_votes : makeVotes(personaSet, input.proposed_action, input.constraints || {});
     const ag = aggregateVotes(votes, { method:'WEIGHTED_APPROVAL_VOTE', approve_threshold:0.7 });
     const final_decision = mapDecision(ag.final_decision);
     const required_actions = [];
@@ -75,13 +78,14 @@ export async function handler(input, opts={}){
 
     const decision_id = crypto.randomUUID();
     const timestamp = new Date().toISOString();
-    const { personas, updates } = updateReputations(personaSet.personas, votes, ag.final_decision);
+    const rep = externalMode ? { personas: [], updates: [] } : updateReputations(personaSet.personas, votes, ag.final_decision);
+    const personas = rep.personas; const updates = rep.updates;
 
     const response = {
       board_id,
       decision_id,
       timestamp,
-      persona_set_id: personaSet.persona_set_id,
+      persona_set_id: personaSet?.persona_set_id || input.persona_set_id || null,
       votes,
       aggregation: {
         method: ag.method,
@@ -105,16 +109,16 @@ export async function handler(input, opts={}){
       aggregation: ag,
       response
     }, statePath);
-    const p = await writeArtifact(board_id, 'persona_set', {
+    const p = externalMode ? null : await writeArtifact(board_id, 'persona_set', {
       ...personaSet,
       persona_set_id: crypto.randomUUID(),
       updated_at: timestamp,
-      lineage: { parent_persona_set_id: personaSet.persona_set_id },
+      lineage: { parent_persona_set_id: personaSet?.persona_set_id || input.persona_set_id || null },
       personas
     }, statePath);
     response.board_writes = [
       { type:'decision', success:true, ref:d.ref },
-      { type:'persona_set', success:true, ref:p.ref }
+      ...(p ? [{ type:'persona_set', success:true, ref:p.ref }] : [])
     ];
     return response;
   } catch(e){
