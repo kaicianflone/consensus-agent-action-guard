@@ -6,3 +6,11 @@ test('e2e action decision write', async()=>{ const out=await handler(input,{stat
 test('idempotent retry', async()=>{ const s=tmp(); const a=await handler(input,{statePath:s}); const b=await handler(input,{statePath:s}); assert.equal(a.decision_id,b.decision_id); });
 test('irreversible high-risk => BLOCK', async()=>{ const out=await handler(input,{statePath:tmp()}); assert.equal(out.final_decision,'BLOCK'); });
 test('strict schema rejection', async()=>{ const out=await handler({...input, extra:1},{statePath:tmp()}); assert.equal(Boolean(out.error),true); assert.equal(out.error.code,'INVALID_INPUT'); });
+
+
+test('example input json stays executable', async()=>{
+  const example = JSON.parse(fs.readFileSync(new URL('../examples/input.json', import.meta.url), 'utf8'));
+  if (!example.board_id) example.board_id = 'board_test';
+  const out = await handler(example,{statePath:tmp()});
+  assert.equal(Boolean(out.error), false);
+});
