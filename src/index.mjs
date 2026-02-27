@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { handler as personaGen } from '../../consensus-persona-generator/src/index.mjs';
+import { handler as personaGen } from 'consensus-persona-generator/src/index.mjs';
 import { rejectUnknown, getLatest, getPersonaSet, getDecisionByKey, writeArtifact, aggregateVotes, updateReputations, makeIdempotencyKey, detectHardBlockFlags, resolveStatePath } from 'consensus-guard-core/src/index.mjs';
 
 const TOP = new Set(['board_id','proposed_action','constraints','persona_set_id','mode','external_votes']);

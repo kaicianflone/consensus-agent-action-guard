@@ -3,6 +3,8 @@ name: consensus-agent-action-guard
 description: Pre-execution governance for high-risk agent actions. Uses persona-weighted consensus to decide ALLOW/BLOCK/REQUIRE_REWRITE before external or irreversible side effects occur, with board-native audit artifacts.
 homepage: https://github.com/kaicianflone/consensus-agent-action-guard
 source: https://github.com/kaicianflone/consensus-agent-action-guard
+metadata:
+  {"openclaw": {"requires": {"bins": ["node", "npm", "tsx"]}}}
 ---
 
 # consensus-agent-action-guard
