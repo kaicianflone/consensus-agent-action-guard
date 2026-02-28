@@ -4,7 +4,7 @@ description: Pre-execution governance for high-risk agent actions. Uses persona-
 homepage: https://github.com/kaicianflone/consensus-agent-action-guard
 source: https://github.com/kaicianflone/consensus-agent-action-guard
 metadata:
-  {"openclaw": {"requires": {"bins": ["node", "tsx"]}}}
+  {"openclaw": {"requires": {"bins": ["node", "tsx"], "env": ["OPENAI_API_KEY"]}}}
 ---
 
 # consensus-agent-action-guard
